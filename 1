@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow SMP | Official</title>
+    <style>
+        /* Grunddesign & Hintergrund */
+        body {
+            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%);
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        /* Schimmernder Hintergrund-Effekt */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(138, 43, 226, 0.2);
+            filter: blur(100px);
+            top: 10%;
+            left: 10%;
+            z-index: -1;
+        }
+
+        /* Der Hauptcontainer (Glassmorphism) */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #8a2be2, #4b0082);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #a0a0c0;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .server-status {
+            display: inline-block;
+            padding: 8px 15px;
+            background: rgba(0, 255, 127, 0.1);
+            border: 1px solid #00ff7f;
+            color: #00ff7f;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            text-align: left;
+            margin: 20px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .features li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .features li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: #8a2be2;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #8a2be2;
+            color: white;
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #a044ff;
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(138, 43, 226, 0.6);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="server-status">● Server Online</div>
+        <h1>Shadow SMP</h1>
+        <p class="subtitle">Tritt aus dem Licht. Werde zur Legende.</p>
+        
+        <ul class="features">
+            <li>Einzigartige Lore & Events</li>
+            <li>Hardcore Survival Erfahrung</li>
+            <li>Engagierte Community</li>
+            <li>Kein Pay-to-Win</li>
+        </ul>
+
+        <div class="btn-group">
+            <a href="#" class="btn btn-primary">Jetzt Beitreten</a>
+            <a href="https://discord.gg/dein-link" class="btn btn-secondary">Discord</a>
+        </div>
+    </div>
+
+</body>
+</html>
